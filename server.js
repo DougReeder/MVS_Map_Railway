@@ -46,7 +46,7 @@ class AuthSimple
    #Logout (Session, pData, fnRSP, fn)
    {
       Session.twRPersonaIx     = 0;
-      
+
       fnRSP (fn, { nResult: 0 });
    }
 }
@@ -291,7 +291,7 @@ class MVSF_Map
          throw err;
       }
    }
-   
+
    // Private helper on the same class
 async #ApplyDatabaseUpdates (pConnection, sDatabaseName)
 {
@@ -299,7 +299,7 @@ async #ApplyDatabaseUpdates (pConnection, sDatabaseName)
    await pConnection.changeUser ({ database: sDatabaseName });
 
    const sUpdatesDir = path.join (__dirname, 'Update');
-   
+
    if (!fs.existsSync (sUpdatesDir))
    {
       console.log (`No 'Update' directory found. Skipping database updates.`);
